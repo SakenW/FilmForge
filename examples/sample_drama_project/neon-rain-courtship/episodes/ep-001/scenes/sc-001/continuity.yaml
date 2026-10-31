@@ -1,0 +1,7 @@
+must_keep:
+  - "char-001-lead identity"
+  - "loc-001-main-set layout"
+allowed_changes:
+  - "emotional intensity"
+forbidden_drifts:
+  - "teleport prop state"

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openclaw.local/filmforge/episode.schema.json",
+  "title": "FilmForge Episode",
+  "type": "object",
+  "required": ["id", "title", "order", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "order": { "type": "integer", "minimum": 1 },
+    "theme": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "outlined", "shot-planned", "rendering", "done"] },
+    "scene_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": true
+}

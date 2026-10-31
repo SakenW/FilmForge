@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openclaw.local/filmforge/prop.schema.json",
+  "title": "FilmForge Prop",
+  "type": "object",
+  "required": ["id", "name", "anchors"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "owner_id": { "type": "string" },
+    "anchors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "symbolic_meaning": { "type": "string" },
+    "current_state": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

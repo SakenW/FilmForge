@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openclaw.local/filmforge/shot.schema.json",
+  "title": "FilmForge Shot",
+  "type": "object",
+  "required": ["id", "scene_id", "order", "subject", "action"],
+  "properties": {
+    "id": { "type": "string" },
+    "scene_id": { "type": "string" },
+    "order": { "type": "integer", "minimum": 1 },
+    "framing": { "type": "string" },
+    "camera_move": { "type": "string" },
+    "subject": { "type": "string" },
+    "action": { "type": "string" },
+    "dialogue": { "type": "string" },
+    "emotion": { "type": "string" },
+    "continuity_refs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "target_asset_type": { "type": "string", "enum": ["image", "video", "storyboard"] }
+  },
+  "additionalProperties": true
+}

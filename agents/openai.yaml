@@ -1,0 +1,7 @@
+interface:
+  display_name: "FilmForge"
+  short_description: "AI drama scaffold and continuity engine"
+  default_prompt: "Use $filmforge to create or extend an AI drama project scaffold with canon, shots, and continuity packets."
+
+policy:
+  allow_implicit_invocation: true

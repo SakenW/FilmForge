@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openclaw.local/filmforge/project.schema.json",
+  "title": "FilmForge Project",
+  "type": "object",
+  "required": ["id", "title", "slug", "format", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "slug": { "type": "string" },
+    "format": { "type": "string", "enum": ["short-drama", "series", "trailer", "animatic"] },
+    "status": { "type": "string", "enum": ["draft", "active", "paused", "archived"] },
+    "logline": { "type": "string" },
+    "audience": { "type": "string" },
+    "tone": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

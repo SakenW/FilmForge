@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openclaw.local/filmforge/continuity-packet.schema.json",
+  "title": "FilmForge Continuity Packet",
+  "type": "object",
+  "required": ["packet_id", "shot_id", "must_keep", "allowed_changes", "forbidden_drifts"],
+  "properties": {
+    "packet_id": { "type": "string" },
+    "shot_id": { "type": "string" },
+    "must_keep": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "allowed_changes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "forbidden_drifts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "story_state": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "look_state": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "shot_handoff": {
+      "type": "object",
+      "properties": {
+        "from_shot_id": { "type": "string" },
+        "to_shot_id": { "type": "string" },
+        "native_continuation": { "type": "boolean" },
+        "frame_strategy": {
+          "type": "string",
+          "enum": ["none", "last_frame", "last_n_frame"]
+        },
+        "frame_offset": { "type": "integer", "minimum": 0 },
+        "overlap_frames": { "type": "integer", "minimum": 0 },
+        "transition_goal": { "type": "string" },
+        "avoid": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

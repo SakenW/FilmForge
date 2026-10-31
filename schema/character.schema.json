@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openclaw.local/filmforge/character.schema.json",
+  "title": "FilmForge Character",
+  "type": "object",
+  "required": ["id", "name", "role", "anchors"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "role": { "type": "string" },
+    "goal": { "type": "string" },
+    "anchors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "continuity_tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "current_state": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

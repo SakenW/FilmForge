@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openclaw.local/filmforge/location.schema.json",
+  "title": "FilmForge Location",
+  "type": "object",
+  "required": ["id", "name", "anchors"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "anchors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "layout_notes": { "type": "string" },
+    "lighting_notes": { "type": "string" },
+    "current_state": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

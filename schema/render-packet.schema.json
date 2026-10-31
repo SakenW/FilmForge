@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openclaw.local/filmforge/render-packet.schema.json",
+  "title": "FilmForge Render Packet",
+  "type": "object",
+  "required": ["packet_id", "shot_id", "kind", "purpose", "prompt_cn", "render_profile"],
+  "properties": {
+    "packet_id": { "type": "string" },
+    "shot_id": { "type": "string" },
+    "kind": { "type": "string", "enum": ["image", "video"] },
+    "purpose": { "type": "string" },
+    "prompt_cn": { "type": "string" },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "role", "path"],
+        "properties": {
+          "type": { "type": "string", "enum": ["image", "video"] },
+          "role": { "type": "string" },
+          "path": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "must_keep": { "type": "array", "items": { "type": "string" } },
+        "can_change": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "transition": {
+      "type": "object",
+      "properties": {
+        "source_shot_id": { "type": "string" },
+        "mode": {
+          "type": "string",
+          "enum": ["cut", "hard-cut", "model-native-continuation", "overlap-frames", "seedance-track-fill", "crossfade", "prompt-convergence"]
+        },
+        "native_continuation": { "type": "boolean" },
+        "extract_frame_policy": {
+          "type": "string",
+          "enum": ["none", "last_frame", "last_n_frame"]
+        },
+        "extract_frame_offset": { "type": "integer", "minimum": 0 },
+        "overlap_frames": { "type": "integer", "minimum": 0 },
+        "overlap_seconds": { "type": "number", "minimum": 0 },
+        "xfade_duration_s": { "type": "number", "minimum": 0 },
+        "xfade_transition": { "type": "string" },
+        "bridge_prompt_cn": { "type": "string" },
+        "emit_last_frame": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "render_profile": { "type": "string", "enum": ["preview", "lookdev", "final"] }
+  },
+  "additionalProperties": true
+}

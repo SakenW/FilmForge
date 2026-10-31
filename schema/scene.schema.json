@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openclaw.local/filmforge/scene.schema.json",
+  "title": "FilmForge Scene",
+  "type": "object",
+  "required": ["id", "episode_id", "order", "title"],
+  "properties": {
+    "id": { "type": "string" },
+    "episode_id": { "type": "string" },
+    "order": { "type": "integer", "minimum": 1 },
+    "title": { "type": "string" },
+    "purpose": { "type": "string" },
+    "location_ids": { "type": "array", "items": { "type": "string" } },
+    "character_ids": { "type": "array", "items": { "type": "string" } },
+    "prop_ids": { "type": "array", "items": { "type": "string" } },
+    "shot_ids": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

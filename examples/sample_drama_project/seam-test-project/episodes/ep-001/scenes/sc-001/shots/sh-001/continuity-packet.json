@@ -1,0 +1,31 @@
+{
+  "packet_id": "cont-ep001-sc001-sh001",
+  "shot_id": "sh-001",
+  "must_keep": [
+    "char-001-lead face anchors",
+    "loc-001-main-set lighting anchors"
+  ],
+  "allowed_changes": [
+    "camera angle"
+  ],
+  "forbidden_drifts": [
+    "costume swap without state update"
+  ],
+  "story_state": {
+    "beat": "opening"
+  },
+  "look_state": {
+    "weather": "dry"
+  },
+  "shot_handoff": {
+    "from_shot_id": "",
+    "to_shot_id": "sh-001",
+    "frame_strategy": "none",
+    "frame_offset": 0,
+    "overlap_frames": 0,
+    "transition_goal": "establish the visual state cleanly",
+    "avoid": [
+      "extreme pose seam"
+    ]
+  }
+}

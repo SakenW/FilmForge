@@ -1,0 +1,17 @@
+{
+  "packet_id": "render-ep001-sc001-sh001",
+  "shot_id": "sh-001",
+  "kind": "image",
+  "purpose": "storyboard",
+  "prompt_cn": "替换成给 ark-media 的中文提示词",
+  "references": [],
+  "constraints": {
+    "must_keep": [
+      "char-001-lead face anchors"
+    ],
+    "can_change": [
+      "framing"
+    ]
+  },
+  "render_profile": "preview"
+}

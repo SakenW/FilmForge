@@ -1,0 +1,6 @@
+must_keep:
+  - "project tone"
+allowed_changes:
+  - "scene state"
+forbidden_drifts:
+  - "break canonical identity"
