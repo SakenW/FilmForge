@@ -1,10 +1,6 @@
 ---
 name: filmforge
-description: >
-  AI drama production skill for OpenClaw. Use when creating or continuing a scripted
-  video project that needs a reusable project scaffold, story bible, character/location/prop
-  canon, episode/scene/shot planning, render packets, and continuity control. FilmForge owns
-  planning and consistency. ark-media only owns image and video generation.
+description: AI 短剧制作技能（OpenClaw）。创建或继续需要可复用项目脚手架、故事圣经、角色/场景/道具设定集、分集/场景/分镜规划、渲染包与一致性控制的剧本视频项目时使用。FilmForge 负责规划与一致性；ark-media 只负责图像与视频生成。
 ---
 
 # FilmForge
